@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 62.4%;
+  --bg-btns: #22d4fd;
+  --f-family: "Krona One", sans-serif;
+  --s-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  color: #f6f6f6;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 5.8rem;
+}
+
+header {
+  max-width: 61.5rem;
+}
+
+h1 {
+  font-family: var(--f-family);
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 156%;
+}
+
+h1 span {
+  color: var(--bg-btns);
+}
+
+p {
+  font-family: var(--s-family);
+  font-size: 2.4rem;
+  line-height: 150%;
+  color: #f6f6f6;
+  margin-block: 4rem 5.1rem;
+}
+
+.img img {
+  border-radius: 1.6rem;
+  height: 100%;
+  filter: grayscale(1);
+  position: relative;
+}
+
+.img {
+  width: 43rem;
+  height: 53.6rem;
+  border-radius: 1.6rem;
+  position: relative;
+}
+
+.img::before {
+  content: "";
+  width: 42rem;
+  height: 53.6rem;
+  position: absolute;
+  border: 1px solid var(--bg-btns);
+  border-radius: 1.6rem;
+  top: -2.5rem;
+  left: 2rem;
+  z-index: -1;
+}
+
+.img::after {
+  content: "";
+  width: 44rem;
+  height: 53.6rem;
+  position: absolute;
+  background: url(./imgs/effects.png) center no-repeat;
+  left: -20px;
+  top: 11rem;
+  transform: scale(0.8) rotate(13deg);
+}
+
+.btns {
+  display: flex;
+  gap: 5rem;
+}
+
+.btns button {
+  border: 0 solid var(--bg-btns);
+  background: var(--bg-btns);
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+  width: 28rem;
+  height: 7.9rem;
+  cursor: pointer;
+
+  font-family: var(--s-family);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 150%;
+  text-align: center;
+
+  transition: box-shadow 0.5s;
+}
+
+.btns button:hover {
+  box-shadow: var(--bg-btns) 0 0 10rem;
+}
